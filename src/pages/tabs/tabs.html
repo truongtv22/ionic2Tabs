@@ -1,0 +1,16 @@
+<ion-tabs #myTabs tabsPlacement="bottom" (ionChange)="onTabsChange($event)">
+  <ion-tab [root]="blank" tabTitle="Home" tabIcon="home"></ion-tab>
+  <ion-tab [root]="blank" tabTitle="About" tabIcon="information-circle"></ion-tab>
+  <ion-tab [root]="blank" tabTitle="Contact" tabIcon="contacts"></ion-tab>
+</ion-tabs>
+<ion-slides #mySlider id="slides-tabs" (ionDidChange)="onSlideChanged()">
+  <ion-slide>
+    <page-home></page-home>
+  </ion-slide>
+  <ion-slide>
+    <page-about></page-about>
+  </ion-slide>
+  <ion-slide>
+    <page-contact></page-contact>
+  </ion-slide>
+</ion-slides>
